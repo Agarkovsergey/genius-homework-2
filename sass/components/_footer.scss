@@ -1,0 +1,31 @@
+footer {
+  background: url(./../images/pexels-photo-8101532-PhotoRoom1.png) no-repeat bottom right, url(./../images/footer.png);
+  background-color: #011c44;
+  a {
+    color: $white-color;
+    &:hover {
+      color: $secondary-text-color;
+    }
+    &.primary {
+      color: $accent-color;
+      font-weight: 700;
+    }
+  }
+  .contacts {
+    .socials {
+      background: #fff;
+    }
+  }
+  .copy {
+    :first-child {
+      color: $white-color;
+      font-size: 16px;
+      line-height: 1;
+    }
+    :last-child {
+      font-size: 13px;
+      line-height: 1;
+      color: $grey-color;
+    }
+  }
+}
