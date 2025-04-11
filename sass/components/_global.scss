@@ -42,7 +42,7 @@ footer {
 /* конец блока прижимает футер к низу страници на случай если у нас будет мало контента, и мы не хотим видеть ниже футера пустоту */
 h1 {
   font-size: 140px;
-  line-height: 1.22;
+  line-height: 0.82;
   text-transform: capitalize;
   color: $accent-color;
   font-family: 'Play', sans-serif;
@@ -55,7 +55,7 @@ a {
   &:hover {
     color: $secondary-text-color;
   }
-  &.primary {
+  &.site-nav__link--current {
     color: $accent-color;
     font-weight: 700;
   }
@@ -84,6 +84,7 @@ address {
 .container {
   padding-left: 100px;
   padding-right: 100px;
+  outline: 1px solid tomato;
   margin: 0 auto;
   @media screen and (min-width: 480px) {
     width: 480px;
@@ -91,8 +92,8 @@ address {
   @media screen and (min-width: 768px) {
     width: 768px;
   }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: 1440px) {
+    width: 1440px;
   }
 }
 .section-title {
