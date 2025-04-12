@@ -29,7 +29,6 @@ body {
           flex-direction: column;
   height: 100%;
   position: relative;
-  background: grey;
 }
 
 /* начало болка прижимает футер к низу страници на случай если у нас будет мало контента, и мы не хотим видеть ниже футера пустоту */
@@ -157,6 +156,7 @@ address {
 }
 
 header {
+  width: 100%;
   padding: 32px 0;
   background: rgba(255, 255, 255, 0.25);
   -webkit-backdrop-filter: blur(10px);
@@ -226,10 +226,14 @@ header .container .menu-container .socials .socials__list .socials__item:not(:la
 }
 
 .hero {
-  background: linear-gradient(89.38deg, #ffffff 30.62%, rgba(255, 255, 255, 0.850898) 41.31%, rgba(255, 255, 255, 0.193204) 58.65%, rgba(255, 255, 255, 0) 72.78%), url(./../images/hero_image.png) no-repeat right;
+  background: url(./../images/hero_bg@3x.png) no-repeat right;
+  background-size: contain;
+  min-height: 686px;
+  margin-bottom: 50px;
 }
 .hero .container {
   padding-top: 122px;
+  padding-left: 180px;
 }
 .hero .hero__sub-title {
   margin-bottom: 16px;
@@ -491,11 +495,12 @@ header .container .menu-container .socials .socials__list .socials__item:not(:la
   display: -ms-flexbox;
   display: flex;
 }
-.footer .container .socials .socials__list .socials__item {
-  background: #fff;
-}
 .footer .container .socials .socials__list .socials__item:not(:last-child) {
   margin-right: 24px;
+}
+.footer .container .socials .socials__list .socials__item .socials__link .icon {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 .footer a {
   color: #ffffff;

@@ -27,9 +27,13 @@
     .socials {
       .socials__list {
         .socials__item {
-          background: #fff;
           &:not(:last-child) {
             margin-right: 24px;
+          }
+          .socials__link {
+            .icon {
+              filter: brightness(0) invert(1);
+            }
           }
         }
       }
