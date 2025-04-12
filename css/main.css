@@ -28,6 +28,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  position: relative;
+  background: grey;
 }
 
 /* начало болка прижимает футер к низу страници на случай если у нас будет мало контента, и мы не хотим видеть ниже футера пустоту */
@@ -116,7 +118,6 @@ address {
 .container {
   padding-left: 100px;
   padding-right: 100px;
-  outline: 1px solid tomato;
   margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
@@ -157,6 +158,13 @@ address {
 
 header {
   padding: 32px 0;
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 header .container {
   display: -webkit-box;
@@ -217,19 +225,19 @@ header .container .menu-container .socials .socials__list .socials__item:not(:la
   margin-right: 32px;
 }
 
-main .hero {
-  background: url(./../images/hero_image.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  margin-top: 16px;
+.hero {
+  background: linear-gradient(89.38deg, #ffffff 30.62%, rgba(255, 255, 255, 0.850898) 41.31%, rgba(255, 255, 255, 0.193204) 58.65%, rgba(255, 255, 255, 0) 72.78%), url(./../images/hero_image.png) no-repeat right;
 }
-main .hero .hero__sub-title {
+.hero .container {
+  padding-top: 122px;
+}
+.hero .hero__sub-title {
   margin-bottom: 16px;
 }
-main .hero .hero__title {
+.hero .hero__title {
   margin-bottom: 40px;
 }
-main .hero .hero__button {
+.hero .hero__button {
   width: 281px;
   height: 53px;
   border-radius: 32px;
@@ -238,42 +246,43 @@ main .hero .hero__button {
   background-color: #2b7fff;
   color: #ffffff;
 }
-main .hero .hero__button:hover {
+.hero .hero__button:hover {
   background-color: #ffffff;
   color: #2b7fff;
 }
-main .hero .hero__text {
+.hero .hero__text {
   font-size: 12px;
   line-height: 1.5;
   color: #4a4a4a;
   width: 280px;
   text-align: center;
 }
-main .features {
+
+.features {
   margin-top: 16px;
 }
-main .features .container {
+.features .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-main .features .container .features-info {
+.features .container .features-info {
   margin-right: 32px;
   width: 48%;
 }
-main .features .container .features-info h2 {
+.features .container .features-info h2 {
   text-align: left;
 }
-main .features .container .features-info .features-text {
+.features .container .features-info .features-text {
   font-size: 22px;
   line-height: 1.7;
   padding-bottom: 40px;
 }
-main .features .container .features-info .features-text span {
+.features .container .features-info .features-text span {
   text-transform: capitalize;
   font-weight: 600;
 }
-main .features .container .features_image {
+.features .container .features_image {
   width: 48%;
   max-width: 500px;
   display: -webkit-box;
@@ -285,14 +294,15 @@ main .features .container .features_image {
           flex-direction: column;
   background: url(./../images/Star_1.png) no-repeat 40% 55%, url(./../images/Star_2.png) no-repeat 98% 8%, url(./../images/Star_3.png) no-repeat 97% 44%;
 }
-main .features .container .features_image .features_image__item img {
+.features .container .features_image .features_image__item img {
   border-radius: 50%;
 }
-main .features .container .features_image .features_image__item:last-child {
+.features .container .features_image .features_image__item:last-child {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
-main .our-jobs {
+
+.our-jobs {
   background: url(./../images/wave_bg.png);
   background-repeat: no-repeat;
   background-position: top;
@@ -300,7 +310,7 @@ main .our-jobs {
   padding-top: 350px;
   padding-bottom: 100px;
 }
-main .our-jobs .container {
+.our-jobs .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,7 +318,7 @@ main .our-jobs .container {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-main .our-jobs .container .our-jobs__item {
+.our-jobs .container .our-jobs__item {
   background-color: #ffffff;
   border-radius: 32px;
   display: -webkit-box;
@@ -323,13 +333,14 @@ main .our-jobs .container .our-jobs__item {
           align-items: center;
   padding: 24px 32px;
 }
-main .our-jobs .container .our-jobs__item:not(:last-child) {
+.our-jobs .container .our-jobs__item:not(:last-child) {
   margin-right: 56px;
 }
-main .our-jobs .container .our-jobs__item .our-jobs__text {
+.our-jobs .container .our-jobs__item .our-jobs__text {
   text-align: center;
 }
-main .our-procedures .slider-container {
+
+.our-procedures .slider-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,20 +349,20 @@ main .our-procedures .slider-container {
           align-items: center;
   margin-bottom: 32px;
 }
-main .our-procedures .content-wraper {
+.our-procedures .content-wraper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 32px;
 }
-main .our-procedures .content-wraper .slider-content:not(:last-child) {
+.our-procedures .content-wraper .slider-content:not(:last-child) {
   margin-right: 16px;
 }
-main .our-procedures .slider-content-text {
+.our-procedures .slider-content-text {
   font-size: 22px;
   line-height: 1.18;
 }
-main .our-procedures .slider-dots {
+.our-procedures .slider-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,10 +370,11 @@ main .our-procedures .slider-dots {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main .find-us {
+
+.find-us {
   margin-bottom: 94px;
 }
-main .find-us .container {
+.find-us .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,21 +384,21 @@ main .find-us .container {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main .find-us .container .map-container {
+.find-us .container .map-container {
   margin-right: 30px;
   margin-left: 32px;
 }
-main .find-us .container .map-container .map_frame {
+.find-us .container .map-container .map_frame {
   border-radius: 32px;
 }
-main .find-us .container .form-container {
+.find-us .container .form-container {
   border-radius: 32px;
   background: url(./../images/form_bg.png);
   background-repeat: no-repeat;
   background-color: #011c44;
   padding: 48px 56px;
 }
-main .find-us .container .form-container .form {
+.find-us .container .form-container .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,7 +410,7 @@ main .find-us .container .form-container .form {
       -ms-flex-align: center;
           align-items: center;
 }
-main .find-us .container .form-container .find-us__form-wraper {
+.find-us .container .form-container .find-us__form-wraper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,7 +419,7 @@ main .find-us .container .form-container .find-us__form-wraper {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-main .find-us .container .form-container h3 {
+.find-us .container .form-container h3 {
   font-size: 22px;
   font-weight: 600;
   color: #ffffff;
@@ -415,10 +427,10 @@ main .find-us .container .form-container h3 {
   max-width: 274px;
   text-align: center;
 }
-main .find-us .container .form-container h3 span {
+.find-us .container .form-container h3 span {
   color: #2b7fff;
 }
-main .find-us .container .form-container input {
+.find-us .container .form-container input {
   width: 310px;
   height: 52px;
   border-radius: 32px;
@@ -427,10 +439,10 @@ main .find-us .container .form-container input {
   padding: 18px 32px;
   margin-bottom: 16px;
 }
-main .find-us .container .form-container label {
+.find-us .container .form-container label {
   display: none;
 }
-main .find-us .container .form-container .form__btn-submit {
+.find-us .container .form-container .form__btn-submit {
   width: 281px;
   height: 53px;
   border-radius: 32px;
@@ -439,18 +451,18 @@ main .find-us .container .form-container .form__btn-submit {
   background-color: #2b7fff;
   color: #ffffff;
 }
-main .find-us .container .form-container .form__btn-submit:hover {
+.find-us .container .form-container .form__btn-submit:hover {
   background-color: #ffffff;
   color: #2b7fff;
 }
-main .find-us .container .form-container .copyrights {
+.find-us .container .form-container .copyrights {
   color: #747272;
   font-size: 12px;
   line-height: 1.5;
   max-width: 213px;
   text-align: center;
 }
-main .find-us .container .form-container .copyrights a {
+.find-us .container .form-container .copyrights a {
   color: #747272;
   text-decoration: underline;
 }

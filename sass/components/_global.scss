@@ -18,6 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  background: grey;
 }
 /* начало болка прижимает футер к низу страници на случай если у нас будет мало контента, и мы не хотим видеть ниже футера пустоту */
 /* так же необходимо задать height:100%; для body и html, и задать display: flex; flex-direction: column; для body */
@@ -84,7 +86,7 @@ address {
 .container {
   padding-left: 100px;
   padding-right: 100px;
-  outline: 1px solid tomato;
+
   margin: 0 auto;
   @media screen and (min-width: 480px) {
     width: 480px;
