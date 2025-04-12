@@ -11,12 +11,19 @@
       &:not(:last-child) {
         margin-right: 16px;
       }
+      position: relative;
+    }
+    .slider-content-text {
+      position: absolute;
+      bottom: 1%;
+      width: 100%;
+      text-align: center;
+      font-size: 22px;
+      line-height: 1.18;
+      color: $white-color;
     }
   }
-  .slider-content-text {
-    font-size: 22px;
-    line-height: 1.18;
-  }
+
   .slider-dots {
     display: flex;
     justify-content: center;
