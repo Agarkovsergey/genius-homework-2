@@ -340,6 +340,9 @@ header .container .menu-container .socials .socials__list .socials__item:not(:la
 .our-jobs .container .our-jobs__item:not(:last-child) {
   margin-right: 56px;
 }
+.our-jobs .container .our-jobs__item .icon {
+  fill: #2b7fff;
+}
 .our-jobs .container .our-jobs__item .our-jobs__text {
   text-align: center;
 }
@@ -507,8 +510,7 @@ header .container .menu-container .socials .socials__list .socials__item:not(:la
   margin-right: 24px;
 }
 .footer .container .socials .socials__list .socials__item .socials__link .icon {
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+  fill: #ffffff;
 }
 .footer a {
   color: #ffffff;
